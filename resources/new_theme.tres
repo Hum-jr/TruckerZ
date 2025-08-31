@@ -1,0 +1,7 @@
+[gd_resource type="Theme" load_steps=2 format=3 uid="uid://bm1otlg3upb2k"]
+
+[ext_resource type="FontFile" uid="uid://bf1rwvcwapgoq" path="res://fonts/jello-stone-font/JelloStone-YqKz8.ttf" id="1_2a54a"]
+
+[resource]
+Label/font_sizes/font_size = 72
+Label/fonts/font = ExtResource("1_2a54a")

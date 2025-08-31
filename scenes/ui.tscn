@@ -1,0 +1,93 @@
+[gd_scene load_steps=5 format=3 uid="uid://c72oys31287gq"]
+
+[ext_resource type="FontFile" uid="uid://bf1rwvcwapgoq" path="res://fonts/jello-stone-font/JelloStone-YqKz8.ttf" id="1_nt7q6"]
+[ext_resource type="Script" uid="uid://yn5txhvc2np4" path="res://scripts/Ui.cs" id="1_x4jx1"]
+[ext_resource type="AudioStream" uid="uid://jx0eysyx4oq5" path="res://musics/retro-chill-screen-372755.mp3" id="3_yev5y"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_x4jx1"]
+border_color = Color(0, 0, 0, 1)
+
+[node name="UI" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_x4jx1")
+
+[node name="ColorRect" type="ColorRect" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0.0862745, 0.0862745, 0.0862745, 0.317647)
+
+[node name="VBoxContainer" type="VBoxContainer" parent="ColorRect"]
+layout_mode = 0
+offset_right = 728.0
+offset_bottom = 1080.0
+
+[node name="MarginContainer" type="MarginContainer" parent="ColorRect/VBoxContainer"]
+layout_mode = 2
+theme_override_constants/margin_left = 100
+theme_override_constants/margin_top = 300
+theme_override_constants/margin_right = 100
+theme_override_constants/margin_bottom = 100
+
+[node name="Button" type="Button" parent="ColorRect/VBoxContainer/MarginContainer"]
+layout_mode = 2
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_colors/font_pressed_color = Color(0.647059, 1, 1, 1)
+theme_override_fonts/font = ExtResource("1_nt7q6")
+theme_override_font_sizes/font_size = 72
+theme_override_styles/pressed = SubResource("StyleBoxFlat_x4jx1")
+text = "NEW GAME
+"
+flat = true
+icon_alignment = 1
+language = "en"
+
+[node name="MarginContainer2" type="MarginContainer" parent="ColorRect/VBoxContainer"]
+layout_mode = 2
+theme_override_constants/margin_left = 100
+theme_override_constants/margin_top = 0
+theme_override_constants/margin_right = 100
+theme_override_constants/margin_bottom = 100
+
+[node name="Button" type="Button" parent="ColorRect/VBoxContainer/MarginContainer2"]
+layout_mode = 2
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_colors/font_pressed_color = Color(0.647059, 1, 1, 1)
+theme_override_fonts/font = ExtResource("1_nt7q6")
+theme_override_font_sizes/font_size = 72
+text = "SETTINGS
+"
+flat = true
+language = "en"
+
+[node name="MarginContainer3" type="MarginContainer" parent="ColorRect/VBoxContainer"]
+layout_mode = 2
+theme_override_constants/margin_left = 100
+theme_override_constants/margin_top = 0
+theme_override_constants/margin_right = 100
+theme_override_constants/margin_bottom = 100
+
+[node name="Button" type="Button" parent="ColorRect/VBoxContainer/MarginContainer3"]
+layout_mode = 2
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_colors/font_pressed_color = Color(0.647059, 1, 1, 1)
+theme_override_fonts/font = ExtResource("1_nt7q6")
+theme_override_font_sizes/font_size = 72
+text = "QUIT
+"
+flat = true
+language = "en"
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("3_yev5y")
+autoplay = true
+
+[connection signal="pressed" from="ColorRect/VBoxContainer/MarginContainer/Button" to="." method="_on_button_pressed"]
