@@ -10,7 +10,7 @@ config_version=5
 
 [application]
 
-config/name="Truckker"
+config/name="TruckkerZ"
 run/main_scene="uid://b3oeg42gyd6w2"
 config/features=PackedStringArray("4.4", "C#", "Forward Plus")
 config/icon="res://icon.svg"
@@ -25,9 +25,17 @@ window/stretch/mode="canvas_items"
 
 project/assembly_name="Truckker"
 
+[editor]
+
+movie_writer/movie_file="C:/Users/HAMPHREY/Desktop/film.avi"
+
 [editor_plugins]
 
 enabled=PackedStringArray("res://addons/terrain_3d/plugin.cfg")
+
+[global_group]
+
+Disappear=""
 
 [gui]
 

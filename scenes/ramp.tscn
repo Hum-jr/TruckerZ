@@ -1,4 +1,4 @@
-[gd_scene load_steps=14 format=4 uid="uid://dgkoky8w75a75"]
+[gd_scene load_steps=15 format=4 uid="uid://dgkoky8w75a75"]
 
 [ext_resource type="Texture2D" uid="uid://cey3nq58e5cg4" path="res://assets/Ramp/ramp_Plane.png" id="1_0b1uk"]
 [ext_resource type="Texture2D" uid="uid://c152bj08b6iu8" path="res://assets/Ramp/ramp_Plane_1.png" id="2_l6boi"]
@@ -119,9 +119,13 @@ shader = ExtResource("3_l6boi")
 shader_parameter/outline_width = 0.001
 shader_parameter/outline_color = Color(0, 0, 0, 1)
 
+[sub_resource type="BoxShape3D" id="BoxShape3D_l6boi"]
+size = Vector3(3.27558, 3.10327, 4.17975)
+
 [node name="Ramp" type="Node3D"]
 
 [node name="Plane_002" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 0.5, 0, 0, 0, 1, 0, 0, 0)
 mesh = SubResource("ArrayMesh_ym8wm")
 skeleton = NodePath("")
 
@@ -131,6 +135,7 @@ skeleton = NodePath("")
 shape = SubResource("ConcavePolygonShape3D_fejpf")
 
 [node name="Plane_026" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 0.5, 0, 0, 0, 1, 0, 0, 0)
 mesh = SubResource("ArrayMesh_fejpf")
 skeleton = NodePath("")
 
@@ -140,6 +145,18 @@ skeleton = NodePath("")
 shape = SubResource("ConcavePolygonShape3D_r8iot")
 
 [node name="Plane_027" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 0.5, 0, 0, 0, 1, 0, 0, 0)
 mesh = SubResource("ArrayMesh_r8iot")
 skeleton = NodePath("")
 surface_material_override/0 = SubResource("ShaderMaterial_2ow0e")
+
+[node name="VehicleDetector" type="Area3D" parent="." groups=["Disappear"]]
+collision_layer = 0
+collision_mask = 2
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="VehicleDetector"]
+transform = Transform3D(5, 0, 0, 0, 5, 0, 0, 0, 5, -0.108613, -1.01379, -0.404816)
+shape = SubResource("BoxShape3D_l6boi")
+
+[connection signal="area_entered" from="VehicleDetector" to="." method="_on_vehicle_detector_area_entered"]
+[connection signal="body_entered" from="VehicleDetector" to="." method="_on_vehicle_detector_body_entered"]

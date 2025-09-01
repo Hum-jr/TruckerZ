@@ -2,20 +2,20 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://mifmnsbetwvx"
-path.s3tc="res://.godot/imported/centre_Plane.png-3817712bb11eca5f50cc41db4659d460.s3tc.ctex"
+uid="uid://bfwijj5xd2iml"
+path.s3tc="res://.godot/imported/seaend_Plane.png-dd30f71e07a9ab2f4395083602462d62.s3tc.ctex"
 metadata={
 "imported_formats": ["s3tc_bptc"],
 "vram_texture": true
 }
 generator_parameters={
-"md5": "08a22221ec49a68ed32e36416d6966cf"
+"md5": "55fff8217cf74f5fbc467c13dfb6511d"
 }
 
 [deps]
 
-source_file="res://assets/Road/centre_Plane.png"
-dest_files=["res://.godot/imported/centre_Plane.png-3817712bb11eca5f50cc41db4659d460.s3tc.ctex"]
+source_file="res://assets/Road/seaend_Plane.png"
+dest_files=["res://.godot/imported/seaend_Plane.png-dd30f71e07a9ab2f4395083602462d62.s3tc.ctex"]
 
 [params]
 

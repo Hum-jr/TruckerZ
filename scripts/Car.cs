@@ -6,10 +6,13 @@ public partial class Car : VehicleBody3D
     public float MaxSteer = 0.9f;
     [Export] 
     public float EnginePower = 300f;
+    
+    private AudioStreamPlayer _audioStreamPlayer;
 
     // Called when the node enters the scene tree for the first time.
     public override void _Ready()
     {
+        _audioStreamPlayer = GetNode<AudioStreamPlayer>("Run");
         // Any initialization code can go here
     }
 

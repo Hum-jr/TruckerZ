@@ -8,7 +8,6 @@ public partial class GameManager : Node
     private VehicleBody3D _truck;
     private Node2D _arrow;
     private Label _speedometerLabel;
-    private MeshInstance3D _brakeLight;
     
     [Export] public float SpeedThreshold = 0.1f; // Minimum speed to register movement
     [Export] public float MaxSpeed = 100f; // Maximum speed for speedometer scale
@@ -25,7 +24,6 @@ public partial class GameManager : Node
         _truck = GetNode<VehicleBody3D>("truck/VehicleBody3D");
         _arrow = GetNode<Node2D>("Overlays/Arrow");
         _speedometerLabel = GetNode<Label>("Overlays/speed");
-        _brakeLight = GetNode<MeshInstance3D>("truck/VehicleBody3D/Plane/BrakeLight");
         
         // Set up speedometer properties
         if (_speedometer != null)

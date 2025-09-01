@@ -40,7 +40,8 @@ theme_override_constants/margin_bottom = 100
 [node name="Button" type="Button" parent="ColorRect/VBoxContainer/MarginContainer"]
 layout_mode = 2
 theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
-theme_override_colors/font_pressed_color = Color(0.647059, 1, 1, 1)
+theme_override_colors/font_pressed_color = Color(2.16588e-07, 0.368365, 0.371509, 1)
+theme_override_constants/outline_size = 8
 theme_override_fonts/font = ExtResource("1_nt7q6")
 theme_override_font_sizes/font_size = 72
 theme_override_styles/pressed = SubResource("StyleBoxFlat_x4jx1")
@@ -60,7 +61,8 @@ theme_override_constants/margin_bottom = 100
 [node name="Button" type="Button" parent="ColorRect/VBoxContainer/MarginContainer2"]
 layout_mode = 2
 theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
-theme_override_colors/font_pressed_color = Color(0.647059, 1, 1, 1)
+theme_override_colors/font_pressed_color = Color(2.16588e-07, 0.368365, 0.371509, 1)
+theme_override_constants/outline_size = 8
 theme_override_fonts/font = ExtResource("1_nt7q6")
 theme_override_font_sizes/font_size = 72
 text = "SETTINGS
@@ -78,7 +80,8 @@ theme_override_constants/margin_bottom = 100
 [node name="Button" type="Button" parent="ColorRect/VBoxContainer/MarginContainer3"]
 layout_mode = 2
 theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
-theme_override_colors/font_pressed_color = Color(0.647059, 1, 1, 1)
+theme_override_colors/font_pressed_color = Color(2.16588e-07, 0.368365, 0.371509, 1)
+theme_override_constants/outline_size = 10
 theme_override_fonts/font = ExtResource("1_nt7q6")
 theme_override_font_sizes/font_size = 72
 text = "QUIT

@@ -2,20 +2,20 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://mifmnsbetwvx"
-path.s3tc="res://.godot/imported/centre_Plane.png-3817712bb11eca5f50cc41db4659d460.s3tc.ctex"
+uid="uid://dcbeis8t2sh1a"
+path.s3tc="res://.godot/imported/roadcorner_Plane.png-7936a788c968e90d04789b66fa03e903.s3tc.ctex"
 metadata={
 "imported_formats": ["s3tc_bptc"],
 "vram_texture": true
 }
 generator_parameters={
-"md5": "08a22221ec49a68ed32e36416d6966cf"
+"md5": "5fbedd2706eff2a39e540bd05a850dd0"
 }
 
 [deps]
 
-source_file="res://assets/Road/centre_Plane.png"
-dest_files=["res://.godot/imported/centre_Plane.png-3817712bb11eca5f50cc41db4659d460.s3tc.ctex"]
+source_file="res://assets/Road/roadcorner_Plane.png"
+dest_files=["res://.godot/imported/roadcorner_Plane.png-7936a788c968e90d04789b66fa03e903.s3tc.ctex"]
 
 [params]
 

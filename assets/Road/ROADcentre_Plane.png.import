@@ -2,8 +2,8 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://mifmnsbetwvx"
-path.s3tc="res://.godot/imported/centre_Plane.png-3817712bb11eca5f50cc41db4659d460.s3tc.ctex"
+uid="uid://yl2ag7e17peq"
+path.s3tc="res://.godot/imported/ROADcentre_Plane.png-968181dd9477f60ffe6e1025aa5e809a.s3tc.ctex"
 metadata={
 "imported_formats": ["s3tc_bptc"],
 "vram_texture": true
@@ -14,8 +14,8 @@ generator_parameters={
 
 [deps]
 
-source_file="res://assets/Road/centre_Plane.png"
-dest_files=["res://.godot/imported/centre_Plane.png-3817712bb11eca5f50cc41db4659d460.s3tc.ctex"]
+source_file="res://assets/Road/ROADcentre_Plane.png"
+dest_files=["res://.godot/imported/ROADcentre_Plane.png-968181dd9477f60ffe6e1025aa5e809a.s3tc.ctex"]
 
 [params]
 

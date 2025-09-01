@@ -3,14 +3,22 @@ using System;
 
 public partial class Camera3d : Camera3D
 {
-    [Export] public float MouseSensitivity = 0.001f;
-    [Export] public float JoystickSensitivity = 2.0f; // Joystick sensitivity
-    [Export] public float MinVerticalAngle = -80.0f; // Degrees
-    [Export] public float MaxVerticalAngle = 80.0f;  // Degrees
-    [Export] public bool ClampHorizontal = false; // Set to true to limit horizontal rotation
-    [Export] public float MaxHorizontalAngle = 180.0f; // Only used if ClampHorizontal is true
-    [Export] public float OrbitDistance = 10.0f; // Distance from car
-    [Export] public Vector3 CarOffset = Vector3.Zero; // Offset from car center
+    [Export] 
+    public float MouseSensitivity = 0.001f;
+    [Export] 
+    public float JoystickSensitivity = 2.0f; // Joystick sensitivity
+    [Export] 
+    public float MinVerticalAngle = -80.0f; // Degrees
+    [Export] 
+    public float MaxVerticalAngle = 80.0f;  // Degrees
+    [Export] 
+    public bool ClampHorizontal = false; // Set to true to limit horizontal rotation
+    [Export] 
+    public float MaxHorizontalAngle = 180.0f; // Only used if ClampHorizontal is true
+    [Export] 
+    public float OrbitDistance = 10.0f; // Distance from car
+    [Export] 
+    public Vector3 CarOffset = Vector3.Zero; // Offset from car center
     
     private float _yaw = 0.0f;   // Horizontal rotation around car
     private float _pitch = 0.0f; // Vertical rotation
@@ -155,19 +163,19 @@ public partial class Camera3d : Camera3D
         }
         
         // Zoom in/out with mouse wheel
-        if (@event is InputEventMouseButton mouseButton)
-        {
-            if (mouseButton.ButtonIndex == MouseButton.WheelUp)
-            {
-                OrbitDistance = Mathf.Max(2.0f, OrbitDistance - 1.0f);
-                UpdateCameraPosition();
-            }
-            else if (mouseButton.ButtonIndex == MouseButton.WheelDown)
-            {
-                OrbitDistance = Mathf.Min(50.0f, OrbitDistance + 1.0f);
-                UpdateCameraPosition();
-            }
-        }
+        // if (@event is InputEventMouseButton mouseButton)
+        // {
+        //     if (mouseButton.ButtonIndex == MouseButton.WheelUp)
+        //     {
+        //         OrbitDistance = Mathf.Max(2.0f, OrbitDistance - 1.0f);
+        //         UpdateCameraPosition();
+        //     }
+        //     else if (mouseButton.ButtonIndex == MouseButton.WheelDown)
+        //     {
+        //         OrbitDistance = Mathf.Min(50.0f, OrbitDistance + 1.0f);
+        //         UpdateCameraPosition();
+        //     }
+        // }
     }
     
     private void UpdateCameraPosition()
