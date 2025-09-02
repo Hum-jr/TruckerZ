@@ -20,15 +20,14 @@ public partial class GameManager : Node
     public override void _Ready()
     {
         // Get references to nodes - adjust paths as needed
-        _speedometer = GetNode<TextureProgressBar>("Overlays/Speedometer/TextureProgressBar");
+        _speedometer = GetNode<TextureProgressBar>("Overlays/Speedometer2/TextureProgressBar");
         _truck = GetNode<VehicleBody3D>("truck/VehicleBody3D");
-        _arrow = GetNode<Node2D>("Overlays/Arrow");
+        _arrow = GetNode<Node2D>("Overlays/Speedometer2/Arrow2");
         _speedometerLabel = GetNode<Label>("Overlays/speed");
         
         // Set up speedometer properties
         if (_speedometer != null)
         {
-            _radialCenterOffset = new Vector2(1523.0f, 1010.0f);
             _speedometer.RadialCenterOffset = _radialCenterOffset;
         }
         

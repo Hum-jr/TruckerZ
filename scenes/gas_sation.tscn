@@ -1,4 +1,4 @@
-[gd_scene load_steps=12 format=4 uid="uid://befeinj0xc30o"]
+[gd_scene load_steps=14 format=4 uid="uid://befeinj0xc30o"]
 
 [ext_resource type="Texture2D" uid="uid://62aenihwflu5" path="res://assets/GASSTATION/GGas_Plane.png" id="1_dgt38"]
 [ext_resource type="Texture2D" uid="uid://cyk7xm35bdiyn" path="res://assets/GASSTATION/GGas_Plane_1.png" id="2_rus0h"]
@@ -50,6 +50,9 @@ shader = ExtResource("2_tq1fp")
 shader_parameter/outline_width = 0.001
 shader_parameter/outline_color = Color(0, 0, 0, 1)
 
+[sub_resource type="ConcavePolygonShape3D" id="ConcavePolygonShape3D_rus0h"]
+data = PackedVector3Array(-1, 0, 1, 1, 0, -1, 1, 0, 1, -1, 0, 1, -1, 0, -1, 1, 0, -1, -1, -0.155, 1, 1, -0.155, -1, -1, -0.155, -1, -1, -0.155, 1, 1, -0.155, 1, 1, -0.155, -1, -1, 0, 1, 1, -0.155, 1, -1, -0.155, 1, -1, 0, 1, 1, 0, 1, 1, -0.155, 1, 1, 0, 1, 1, -0.155, -1, 1, -0.155, 1, 1, 0, 1, 1, 0, -1, 1, -0.155, -1, -1, 0, -1, -1, -0.155, 1, -1, -0.155, -1, -1, 0, -1, -1, 0, 1, -1, -0.155, 1, 1, 0, -1, -1, -0.155, -1, 1, -0.155, -1, 1, 0, -1, -1, 0, -1, -1, -0.155, -1, 0.5796, -0.155, 0.0604, 0.7004, -0.155, -0.0604, 0.7004, -0.155, 0.0604, 0.5796, -0.155, 0.0604, 0.5796, -0.155, -0.0604, 0.7004, -0.155, -0.0604, 0.5796, -0.9017, 0.0604, 0.7004, -0.9017, -0.0604, 0.5796, -0.9017, -0.0604, 0.5796, -0.9017, 0.0604, 0.7004, -0.9017, 0.0604, 0.7004, -0.9017, -0.0604, 0.7004, -0.155, -0.0604, 0.5796, -0.9017, -0.0604, 0.7004, -0.9017, -0.0604, 0.7004, -0.155, -0.0604, 0.5796, -0.155, -0.0604, 0.5796, -0.9017, -0.0604, 0.5796, -0.155, 0.0604, 0.7004, -0.9017, 0.0604, 0.5796, -0.9017, 0.0604, 0.5796, -0.155, 0.0604, 0.7004, -0.155, 0.0604, 0.7004, -0.9017, 0.0604, 0.7004, -0.155, 0.0604, 0.7004, -0.9017, -0.0604, 0.7004, -0.9017, 0.0604, 0.7004, -0.155, 0.0604, 0.7004, -0.155, -0.0604, 0.7004, -0.9017, -0.0604, 0.5796, -0.155, -0.0604, 0.5796, -0.9017, 0.0604, 0.5796, -0.9017, -0.0604, 0.5796, -0.155, -0.0604, 0.5796, -0.155, 0.0604, 0.5796, -0.9017, 0.0604, -0.7538, -0.155, 0.0604, -0.6329, -0.155, -0.0604, -0.6329, -0.155, 0.0604, -0.7538, -0.155, 0.0604, -0.7538, -0.155, -0.0604, -0.6329, -0.155, -0.0604, -0.7538, -0.9017, 0.0604, -0.6329, -0.9017, -0.0604, -0.7538, -0.9017, -0.0604, -0.7538, -0.9017, 0.0604, -0.6329, -0.9017, 0.0604, -0.6329, -0.9017, -0.0604, -0.6329, -0.155, -0.0604, -0.7538, -0.9017, -0.0604, -0.6329, -0.9017, -0.0604, -0.6329, -0.155, -0.0604, -0.7538, -0.155, -0.0604, -0.7538, -0.9017, -0.0604, -0.7538, -0.155, 0.0604, -0.6329, -0.9017, 0.0604, -0.7538, -0.9017, 0.0604, -0.7538, -0.155, 0.0604, -0.6329, -0.155, 0.0604, -0.6329, -0.9017, 0.0604, -0.6329, -0.155, 0.0604, -0.6329, -0.9017, -0.0604, -0.6329, -0.9017, 0.0604, -0.6329, -0.155, 0.0604, -0.6329, -0.155, -0.0604, -0.6329, -0.9017, -0.0604, -0.7538, -0.155, -0.0604, -0.7538, -0.9017, 0.0604, -0.7538, -0.9017, -0.0604, -0.7538, -0.155, -0.0604, -0.7538, -0.155, 0.0604, -0.7538, -0.9017, 0.0604)
+
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_adypv"]
 resource_name = "Plane.032"
 cull_mode = 2
@@ -98,6 +101,9 @@ shader = ExtResource("2_tq1fp")
 shader_parameter/outline_width = 0.001
 shader_parameter/outline_color = Color(0, 0, 0, 1)
 
+[sub_resource type="ConvexPolygonShape3D" id="ConvexPolygonShape3D_tq1fp"]
+points = PackedVector3Array(-0.479788, -0.901667, -0.109369, -0.261051, -0.901667, -0.109369, -0.479788, -0.901667, 0.109368, -0.479788, -0.437987, -0.109369, -0.261051, -0.901667, 0.109368, -0.261051, -0.437987, -0.109369, -0.479788, -0.437987, 0.109368, -0.261051, -0.437987, 0.109368)
+
 [node name="GasSation" type="Node3D"]
 
 [node name="Plane_030" type="MeshInstance3D" parent="."]
@@ -106,10 +112,14 @@ mesh = SubResource("ArrayMesh_1kvji")
 skeleton = NodePath("")
 
 [node name="Plane_031" type="MeshInstance3D" parent="Plane_030"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0)
 mesh = SubResource("ArrayMesh_1kvji")
 skeleton = NodePath("")
 surface_material_override/0 = SubResource("ShaderMaterial_p2r32")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="Plane_030"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Plane_030/StaticBody3D"]
+shape = SubResource("ConcavePolygonShape3D_rus0h")
 
 [node name="Plane_032" type="MeshInstance3D" parent="."]
 transform = Transform3D(18.7496, 0, 0, 0, 18.7496, 0, 0, 0, 18.7496, 1.09231, 17.0525, -0.0267715)
@@ -117,18 +127,26 @@ mesh = SubResource("ArrayMesh_7w8u5")
 skeleton = NodePath("")
 
 [node name="Plane_033" type="MeshInstance3D" parent="Plane_032"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0)
 mesh = SubResource("ArrayMesh_7w8u5")
 skeleton = NodePath("")
 surface_material_override/0 = SubResource("ShaderMaterial_k5h3j")
 
+[node name="StaticBody3D" type="StaticBody3D" parent="Plane_032"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Plane_032/StaticBody3D"]
+shape = SubResource("ConvexPolygonShape3D_tq1fp")
+
 [node name="Plane_033" type="MeshInstance3D" parent="."]
-transform = Transform3D(18.7496, 0, 0, 0, 18.7496, 0, 0, 0, 18.7496, 14.0923, 17.0525, -0.0267715)
+transform = Transform3D(18.7496, 0, 0, 0, 18.7496, 0, 0, 0, 18.7496, 13.0923, 17.0525, -0.0267715)
 mesh = SubResource("ArrayMesh_7w8u5")
 skeleton = NodePath("")
 
 [node name="Plane_033" type="MeshInstance3D" parent="Plane_033"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0)
 mesh = SubResource("ArrayMesh_7w8u5")
 skeleton = NodePath("")
 surface_material_override/0 = SubResource("ShaderMaterial_k5h3j")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="Plane_033"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Plane_033/StaticBody3D"]
+shape = SubResource("ConvexPolygonShape3D_tq1fp")

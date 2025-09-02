@@ -6,6 +6,8 @@ public partial class Car : VehicleBody3D
     public float MaxSteer = 0.9f;
     [Export] 
     public float EnginePower = 300f;
+
+    private float _currentSpeed;
     
     private AudioStreamPlayer _audioStreamPlayer;
 
@@ -13,17 +15,32 @@ public partial class Car : VehicleBody3D
     public override void _Ready()
     {
         _audioStreamPlayer = GetNode<AudioStreamPlayer>("Run");
-        // Any initialization code can go here
+        _currentSpeed = LinearVelocity.Length();
+        _audioStreamPlayer.Play();
+        
+        
+        
+        
     }
 
-    // Called every frame. 'delta' is the elapsed time since the previous frame.
     public override void _PhysicsProcess(double delta)
     {
+        
         // Vehicle controls
         var steerInput = Input.GetAxis("steer_right", "steer_left") * MaxSteer;
         Steering = Mathf.MoveToward(Steering, steerInput, (float)delta);
         
         var accelerateInput = Input.GetAxis("reverse", "accelerate") * EnginePower;
         EngineForce = accelerateInput;
+        GD.Print("Vellocity: " + _currentSpeed);
+        
+        if (_currentSpeed > 0.1 && _audioStreamPlayer.Playing == false)
+        {
+            _audioStreamPlayer.Play();
+            // _audioStreamPlayer.Play();
+            GD.Print("Playing ");
+
+
+        }
     }
 }

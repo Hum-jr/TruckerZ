@@ -33,6 +33,21 @@ fog_density = 0.001
 volumetric_fog_enabled = true
 volumetric_fog_density = 0.08
 
+[sub_resource type="Animation" id="Animation_5otog"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Truck:rotation")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector3(0, 6.28319, 0)]
+}
+
 [sub_resource type="Animation" id="Animation_o35pn"]
 resource_name = "rotate"
 length = 3.0
@@ -48,21 +63,6 @@ tracks/0/keys = {
 "transitions": PackedFloat32Array(1, 1),
 "update": 0,
 "values": [Vector3(0, 0, 0), Vector3(0, 6.28319, 0)]
-}
-
-[sub_resource type="Animation" id="Animation_5otog"]
-length = 0.001
-tracks/0/type = "value"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath("Truck:rotation")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 0,
-"values": [Vector3(0, 6.28319, 0)]
 }
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_v1ggj"]
@@ -751,7 +751,7 @@ libraries = {
 }
 
 [node name="Truck" type="Node3D" parent="."]
-transform = Transform3D(1, 0, 1.74846e-07, 0, 1, 0, -1.74846e-07, 0, 1, 20.9344, 1.29534, -4.55945)
+transform = Transform3D(1, 0, 4.46638e-06, 0, 1, 0, -4.46638e-06, 0, 1, 20.9344, 1.29534, -4.55945)
 
 [node name="truck" type="Node3D" parent="Truck"]
 transform = Transform3D(0.866025, 0, -0.5, 0, 1, 0, 0.5, 0, 0.866025, -1.89593, -1.29534, 1.62448)

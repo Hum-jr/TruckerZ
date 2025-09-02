@@ -1,0 +1,19 @@
+[gd_scene load_steps=3 format=3 uid="uid://cb3486ktm86tu"]
+
+[sub_resource type="PlaneMesh" id="PlaneMesh_3a6sd"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_h7np4"]
+cull_mode = 2
+albedo_color = Color(0.188235, 0.576471, 0.792157, 1)
+metallic = 0.06
+metallic_specular = 1.0
+roughness = 0.05
+emission_enabled = true
+emission = Color(0.188235, 0.576471, 0.792157, 1)
+
+[node name="Node3D" type="Node3D"]
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="."]
+transform = Transform3D(400, 0, 0, 0, 400, 0, 0, 0, 400, 0, 0, 0)
+mesh = SubResource("PlaneMesh_3a6sd")
+surface_material_override/0 = SubResource("StandardMaterial3D_h7np4")

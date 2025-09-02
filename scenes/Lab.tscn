@@ -1,4 +1,4 @@
-[gd_scene load_steps=51 format=4 uid="uid://dqos1vfs40ymp"]
+[gd_scene load_steps=49 format=4 uid="uid://dqos1vfs40ymp"]
 
 [ext_resource type="Script" uid="uid://d3dta774wtb61" path="res://scripts/GameManager.cs" id="1_fsrjm"]
 [ext_resource type="Texture2D" uid="uid://cco845j3g8dh1" path="res://hdrs/citrus_orchard_road_puresky_4k.exr" id="1_mwbmb"]
@@ -6,14 +6,12 @@
 [ext_resource type="Texture2D" uid="uid://cn5vcf7w5lsiu" path="res://textures/speedometer/meter.png" id="6_lqjjf"]
 [ext_resource type="Texture2D" uid="uid://cdsww2gyew4ff" path="res://assets/truck/truck_Plane Layer.png" id="7_onpel"]
 [ext_resource type="Texture2D" uid="uid://defr8vcorlqgd" path="res://assets/truck/truck_Cube.png" id="8_3ude5"]
-[ext_resource type="PackedScene" uid="uid://crckfv4iuhwvo" path="res://scenes/GROCERY.tscn" id="8_ibfuu"]
 [ext_resource type="Texture2D" uid="uid://cp5c65f8fwgtv" path="res://textures/speedometer/full.png" id="9_27pjn"]
 [ext_resource type="Texture2D" uid="uid://dcnnfxqem0fsi" path="res://assets/truck/truck_Cube_2.png" id="9_ni2f7"]
 [ext_resource type="Texture2D" uid="uid://wxiprts45ywl" path="res://assets/truck/truck_Cube_3.png" id="10_wpd25"]
 [ext_resource type="Texture2D" uid="uid://cpucr62vxha04" path="res://assets/truck/truck_Cube_4.png" id="11_ccu6m"]
 [ext_resource type="Texture2D" uid="uid://ywfqxntuvlix" path="res://assets/truck/truck_Plane.png" id="12_urwjw"]
 [ext_resource type="Texture2D" uid="uid://bvbu5o414srsk" path="res://assets/truck/truck_Cylinder Layer.png" id="13_judsq"]
-[ext_resource type="PackedScene" uid="uid://b8061cgsd6tam" path="res://scenes/bridge.tscn" id="14_judsq"]
 [ext_resource type="Texture2D" uid="uid://c12u8qv52lrlk" path="res://assets/truck/truck_Plane_7.png" id="14_vthbb"]
 [ext_resource type="Texture2D" uid="uid://bg6v24b0eu2b8" path="res://assets/truck/truck_Cylinder.png" id="15_s8t1o"]
 [ext_resource type="PackedScene" uid="uid://dgkoky8w75a75" path="res://scenes/ramp.tscn" id="15_vthbb"]
@@ -647,21 +645,10 @@ use_collision = true
 mesh = SubResource("BoxMesh_ha02p")
 material = SubResource("StandardMaterial3D_8xsak")
 
-[node name="bridge2" parent="." instance=ExtResource("14_judsq")]
-transform = Transform3D(3, 0, 0, 0, 3, 0, 0, 0, 3, -22.8852, 4.03357, 0.293843)
-
-[node name="ramp2" parent="bridge2" instance=ExtResource("15_vthbb")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.000432968, -1.43165, 11.9019)
-
-[node name="bridge3" parent="." instance=ExtResource("14_judsq")]
-transform = Transform3D(-3, 0, -4.52987e-07, 0, 3, 0, 4.52987e-07, 0, -3, -22.8852, 4.02673, -17.9336)
-
-[node name="ramp2" parent="bridge3" instance=ExtResource("15_vthbb")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.000432968, -1.43165, 11.9019)
-
 [node name="truck" type="Node3D" parent="."]
 
 [node name="VehicleBody3D" type="VehicleBody3D" parent="truck"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 15.1061, 0, 0)
 gravity_scale = 2.0
 script = SubResource("CSharpScript_4j48n")
 
@@ -753,9 +740,6 @@ shape = SubResource("CylinderShape3D_820nd")
 
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
 
-[node name="GROCERY" parent="." instance=ExtResource("8_ibfuu")]
-transform = Transform3D(-1.35505e-09, 0, 0.031, 0, 0.031, 0, -0.031, 0, -1.35505e-09, 0, 0, -56.652)
-
 [node name="Speedometer" type="Control" parent="."]
 layout_mode = 3
 anchors_preset = 0
@@ -782,3 +766,6 @@ script = SubResource("GDScript_r70hd")
 
 [node name="Node2D" type="Node2D" parent="."]
 position = Vector2(1412, 1026)
+
+[node name="ramp2" parent="." instance=ExtResource("15_vthbb")]
+transform = Transform3D(-1, 0, -1.50996e-07, 0, 1, 0, 1.50996e-07, 0, -1, -22.8865, 9.15474, -12.398)
