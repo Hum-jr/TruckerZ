@@ -1,10 +1,10 @@
 [gd_resource type="MeshLibrary" load_steps=36 format=4 uid="uid://bvy1e7c15qgwt"]
 
-[ext_resource type="Texture2D" uid="uid://mifmnsbetwvx" path="res://assets/Road/centre_Plane.png" id="1_8y3d2"]
-[ext_resource type="Texture2D" uid="uid://bxwkoyb6rbbw" path="res://assets/Road/grasscentre_Plane.png" id="2_hyfxm"]
-[ext_resource type="Texture2D" uid="uid://bv7tp2brt3nae" path="res://assets/Road/grasscorner_Plane.png" id="3_0ftey"]
-[ext_resource type="Texture2D" uid="uid://dvpwkgqah7yvw" path="res://assets/Road/grassedge_Plane.png" id="4_0dhg5"]
-[ext_resource type="Texture2D" uid="uid://blkqb80kw85nu" path="res://assets/Road/sttraight_Plane Layer.png" id="5_4xt4k"]
+[ext_resource type="Texture2D" uid="uid://mifmnsbetwvx" path="res://assets/ground/centre_Plane.png" id="1_8y3d2"]
+[ext_resource type="Texture2D" uid="uid://bxwkoyb6rbbw" path="res://assets/ground/grasscentre_Plane.png" id="2_hyfxm"]
+[ext_resource type="Texture2D" uid="uid://bv7tp2brt3nae" path="res://assets/ground/grasscorner_Plane.png" id="3_0ftey"]
+[ext_resource type="Texture2D" uid="uid://dvpwkgqah7yvw" path="res://assets/ground/grassedge_Plane.png" id="4_0dhg5"]
+[ext_resource type="Texture2D" uid="uid://blkqb80kw85nu" path="res://assets/ground/sttraight_Plane Layer.png" id="5_4xt4k"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_y0ikg"]
 resource_name = "Plane.023"

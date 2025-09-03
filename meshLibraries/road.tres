@@ -1,6 +1,6 @@
 [gd_resource type="MeshLibrary" load_steps=8 format=4 uid="uid://rvjqh4pyavho"]
 
-[ext_resource type="Texture2D" uid="uid://d7gt5tta2coq" path="res://assets/Road/road_Plane Layer.png" id="1_1sq0u"]
+[ext_resource type="Texture2D" uid="uid://d7gt5tta2coq" path="res://assets/ground/road_Plane Layer.png" id="1_1sq0u"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_qulkp"]
 resource_name = "Plane"

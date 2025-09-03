@@ -13,9 +13,10 @@ config_version=5
 config/name="TruckkerZ"
 run/main_scene="uid://b3oeg42gyd6w2"
 config/features=PackedStringArray("4.4", "C#", "Forward Plus")
-boot_splash/bg_color=Color(1, 1, 1, 1)
+boot_splash/bg_color=Color(0, 0.402315, 0.403881, 1)
 boot_splash/fullsize=false
 boot_splash/image="uid://q263yoniskui"
+config/icon="uid://q263yoniskui"
 
 [display]
 

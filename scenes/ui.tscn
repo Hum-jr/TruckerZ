@@ -1,4 +1,4 @@
-[gd_scene load_steps=5 format=3 uid="uid://c72oys31287gq"]
+[gd_scene load_steps=6 format=3 uid="uid://c72oys31287gq"]
 
 [ext_resource type="FontFile" uid="uid://bf1rwvcwapgoq" path="res://fonts/jello-stone-font/JelloStone-YqKz8.ttf" id="1_nt7q6"]
 [ext_resource type="Script" uid="uid://yn5txhvc2np4" path="res://scripts/Ui.cs" id="1_x4jx1"]
@@ -6,6 +6,9 @@
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_x4jx1"]
 border_color = Color(0, 0, 0, 1)
+
+[sub_resource type="SystemFont" id="SystemFont_yev5y"]
+font_italic = true
 
 [node name="UI" type="Control"]
 layout_mode = 3
@@ -92,5 +95,15 @@ language = "en"
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
 stream = ExtResource("3_yev5y")
 autoplay = true
+
+[node name="Label" type="Label" parent="."]
+layout_mode = 0
+offset_top = 967.0
+offset_right = 1920.0
+offset_bottom = 1040.0
+theme_override_fonts/font = SubResource("SystemFont_yev5y")
+theme_override_font_sizes/font_size = 35
+text = "Wabiro Studios 2025"
+horizontal_alignment = 1
 
 [connection signal="pressed" from="ColorRect/VBoxContainer/MarginContainer/Button" to="." method="_on_button_pressed"]

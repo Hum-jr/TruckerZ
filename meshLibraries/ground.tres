@@ -1,9 +1,9 @@
 [gd_resource type="MeshLibrary" load_steps=38 format=4 uid="uid://b28v6780slyy1"]
 
-[ext_resource type="Texture2D" uid="uid://doimyxps3kokh" path="res://assets/Road/1_Plane Layer.png" id="1_4wdkg"]
+[ext_resource type="Texture2D" uid="uid://doimyxps3kokh" path="res://assets/ground/1_Plane Layer.png" id="1_4wdkg"]
 [ext_resource type="Texture2D" uid="uid://dxdc21gef22ql" path="res://assets/cabro/cabro_Plane.png" id="2_1lrf1"]
-[ext_resource type="Texture2D" uid="uid://dv1id4jr8ts22" path="res://assets/Road/2_Plane Layer.png" id="3_qcjlq"]
-[ext_resource type="Texture2D" uid="uid://bior687vh8ch6" path="res://assets/Road/corner_Plane.png" id="4_qwr7y"]
+[ext_resource type="Texture2D" uid="uid://dv1id4jr8ts22" path="res://assets/ground/2_Plane Layer.png" id="3_qcjlq"]
+[ext_resource type="Texture2D" uid="uid://bior687vh8ch6" path="res://assets/ground/corner_Plane.png" id="4_qwr7y"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_7lmvv"]
 resource_name = "Plane"

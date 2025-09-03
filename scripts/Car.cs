@@ -32,13 +32,13 @@ public partial class Car : VehicleBody3D
         
         var accelerateInput = Input.GetAxis("reverse", "accelerate") * EnginePower;
         EngineForce = accelerateInput;
-        GD.Print("Vellocity: " + _currentSpeed);
+    
         
         if (_currentSpeed > 0.1 && _audioStreamPlayer.Playing == false)
         {
             _audioStreamPlayer.Play();
             // _audioStreamPlayer.Play();
-            GD.Print("Playing ");
+         
 
 
         }

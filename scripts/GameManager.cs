@@ -20,10 +20,10 @@ public partial class GameManager : Node
     public override void _Ready()
     {
         // Get references to nodes - adjust paths as needed
-        _speedometer = GetNode<TextureProgressBar>("Overlays/Speedometer2/TextureProgressBar");
+        _speedometer = GetNode<TextureProgressBar>("ScreenElements/Speedometer2/TextureProgressBar");
         _truck = GetNode<VehicleBody3D>("truck/VehicleBody3D");
-        _arrow = GetNode<Node2D>("Overlays/Speedometer2/Arrow2");
-        _speedometerLabel = GetNode<Label>("Overlays/speed");
+        _arrow = GetNode<Node2D>("ScreenElements/Speedometer2/Arrow2");
+        _speedometerLabel = GetNode<Label>("ScreenElements/Speedometer2/speed");
         
         // Set up speedometer properties
         if (_speedometer != null)
@@ -61,10 +61,7 @@ public partial class GameManager : Node
             // Update arrow rotation based on speed
             UpdateArrowRotation(currentSpeed);
             
-            // Debug output (remove these in final version)
-            GD.Print($"Speed: {currentSpeed:F2}");
-            GD.Print($"Speedometer Value: {_speedometer.Value:F2}");
-            GD.Print($"Arrow Rotation: {_arrow.RotationDegrees:F2}");
+            
         }
     }
     
