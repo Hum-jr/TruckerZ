@@ -4,12 +4,12 @@ importer="scene"
 importer_version=1
 type="PackedScene"
 uid="uid://qt5edpecvip1"
-path="res://.godot/imported/GGas.glb-1c4cf6beb3e24013af5a3b4c245f6dae.scn"
+path="res://.godot/imported/GGas.glb-b1364675ce1b68dbb822e2570a835c07.scn"
 
 [deps]
 
-source_file="res://assets/GASSTATION/GGas.glb"
-dest_files=["res://.godot/imported/GGas.glb-1c4cf6beb3e24013af5a3b4c245f6dae.scn"]
+source_file="res://assets/gasstation/GGas.glb"
+dest_files=["res://.godot/imported/GGas.glb-b1364675ce1b68dbb822e2570a835c07.scn"]
 
 [params]
 

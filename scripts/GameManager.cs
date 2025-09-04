@@ -1,4 +1,5 @@
 using Godot;
+using Godot.Collections;
 
 namespace Truckker.scripts;
 
@@ -9,10 +10,17 @@ public partial class GameManager : Node
     private Node2D _arrow;
     private Label _speedometerLabel;
     
-    [Export] public float SpeedThreshold = 0.1f; // Minimum speed to register movement
-    [Export] public float MaxSpeed = 100f; // Maximum speed for speedometer scale
-    [Export] public float ArrowMinRotation = -111.7f; // Arrow position at 0 speed
-    [Export] public float ArrowMaxRotation = 50f; // Arrow position at max speed
+    
+    [Export]
+    private Array<PackedScene> _sceneArray = new Array<PackedScene>();
+    [Export] 
+    public float SpeedThreshold = 0.1f; // Minimum speed to register movement
+    [Export] 
+    public float MaxSpeed = 100f; // Maximum speed for speedometer scale
+    [Export] 
+    public float ArrowMinRotation = -111.7f; // Arrow position at 0 speed
+    [Export] 
+    public float ArrowMaxRotation = 50f; // Arrow position at max speed
     
     private Vector2 _radialCenterOffset;
     
@@ -24,6 +32,7 @@ public partial class GameManager : Node
         _truck = GetNode<VehicleBody3D>("truck/VehicleBody3D");
         _arrow = GetNode<Node2D>("ScreenElements/Speedometer2/Arrow2");
         _speedometerLabel = GetNode<Label>("ScreenElements/Speedometer2/speed");
+        
         
         // Set up speedometer properties
         if (_speedometer != null)
@@ -78,5 +87,10 @@ public partial class GameManager : Node
         
         // OR for instant response, use:
         // arrow.RotationDegrees = targetRotation;
+    }
+
+    private void _vehicle_choooser(int index)
+    {
+        var vehicle = _sceneArray[index];
     }
 }

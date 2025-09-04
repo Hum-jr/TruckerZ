@@ -8,8 +8,7 @@
 resource_name = "Cube.004"
 cull_mode = 2
 albedo_color = Color(0, 0, 0, 1)
-metallic = 1.0
-roughness = 0.4
+metallic_specular = 0.0
 emission_enabled = true
 emission_texture = ExtResource("1_4tlro")
 

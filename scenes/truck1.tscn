@@ -676,6 +676,7 @@ gravity_scale = 2.0
 linear_damp = 0.1
 angular_damp = 0.3
 script = ExtResource("1_pd2wf")
+MaxSteer = 0.5
 
 [node name="Plane" type="MeshInstance3D" parent="VehicleBody3D"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.610143, 3.09462, 1.95816)

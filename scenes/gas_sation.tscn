@@ -1,7 +1,7 @@
 [gd_scene load_steps=14 format=4 uid="uid://befeinj0xc30o"]
 
-[ext_resource type="Texture2D" uid="uid://62aenihwflu5" path="res://assets/GASSTATION/GGas_Plane.png" id="1_dgt38"]
-[ext_resource type="Texture2D" uid="uid://cyk7xm35bdiyn" path="res://assets/GASSTATION/GGas_Plane_1.png" id="2_rus0h"]
+[ext_resource type="Texture2D" uid="uid://62aenihwflu5" path="res://assets/gasstation/GGas_Plane.png" id="1_dgt38"]
+[ext_resource type="Texture2D" uid="uid://cyk7xm35bdiyn" path="res://assets/gasstation/GGas_Plane_1.png" id="2_rus0h"]
 [ext_resource type="Shader" uid="uid://j0eqex0pbfl5" path="res://scripts/shaders/truck1.gdshader" id="2_tq1fp"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_f8ia5"]

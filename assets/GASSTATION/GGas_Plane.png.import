@@ -3,7 +3,7 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://62aenihwflu5"
-path.s3tc="res://.godot/imported/GGas_Plane.png-a8a34ab24e4b233c6e268e782c6d3a7c.s3tc.ctex"
+path.s3tc="res://.godot/imported/GGas_Plane.png-ecc87a1355079285c6cdb093f6e43349.s3tc.ctex"
 metadata={
 "imported_formats": ["s3tc_bptc"],
 "vram_texture": true
@@ -14,8 +14,8 @@ generator_parameters={
 
 [deps]
 
-source_file="res://assets/GASSTATION/GGas_Plane.png"
-dest_files=["res://.godot/imported/GGas_Plane.png-a8a34ab24e4b233c6e268e782c6d3a7c.s3tc.ctex"]
+source_file="res://assets/gasstation/GGas_Plane.png"
+dest_files=["res://.godot/imported/GGas_Plane.png-ecc87a1355079285c6cdb093f6e43349.s3tc.ctex"]
 
 [params]
 
