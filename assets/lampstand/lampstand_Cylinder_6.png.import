@@ -4,8 +4,9 @@ importer="texture"
 type="CompressedTexture2D"
 uid="uid://cfmoswktpdbjl"
 path.s3tc="res://.godot/imported/lampstand_Cylinder_6.png-508b7af1a02c5caa903b647735622214.s3tc.ctex"
+path.etc2="res://.godot/imported/lampstand_Cylinder_6.png-508b7af1a02c5caa903b647735622214.etc2.ctex"
 metadata={
-"imported_formats": ["s3tc_bptc"],
+"imported_formats": ["s3tc_bptc", "etc2_astc"],
 "vram_texture": true
 }
 generator_parameters={
@@ -15,7 +16,7 @@ generator_parameters={
 [deps]
 
 source_file="res://assets/lampstand/lampstand_Cylinder_6.png"
-dest_files=["res://.godot/imported/lampstand_Cylinder_6.png-508b7af1a02c5caa903b647735622214.s3tc.ctex"]
+dest_files=["res://.godot/imported/lampstand_Cylinder_6.png-508b7af1a02c5caa903b647735622214.s3tc.ctex", "res://.godot/imported/lampstand_Cylinder_6.png-508b7af1a02c5caa903b647735622214.etc2.ctex"]
 
 [params]
 

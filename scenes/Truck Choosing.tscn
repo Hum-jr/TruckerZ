@@ -1,0 +1,53 @@
+[gd_scene load_steps=3 format=3 uid="uid://dt2scha2l23jt"]
+
+[ext_resource type="Script" uid="uid://dhx834wijgg7q" path="res://scripts/TruckChoosing.cs" id="1_4o2gf"]
+[ext_resource type="FontFile" uid="uid://bf1rwvcwapgoq" path="res://fonts/jello-stone-font/JelloStone-YqKz8.ttf" id="2_eog5j"]
+
+[node name="Control" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_4o2gf")
+
+[node name="Forward" type="Button" parent="."]
+layout_mode = 0
+offset_left = 1280.0
+offset_top = 936.0
+offset_right = 1345.0
+offset_bottom = 1013.0
+theme_override_font_sizes/font_size = 50
+text = ">"
+
+[node name="Previous" type="Button" parent="."]
+layout_mode = 0
+offset_left = 576.0
+offset_top = 944.0
+offset_right = 641.0
+offset_bottom = 1021.0
+theme_override_font_sizes/font_size = 50
+text = "<"
+
+[node name="Select" type="Button" parent="."]
+layout_mode = 0
+offset_left = 872.0
+offset_top = 824.0
+offset_right = 1050.0
+offset_bottom = 901.0
+theme_override_fonts/font = ExtResource("2_eog5j")
+theme_override_font_sizes/font_size = 50
+text = "SELECT"
+autowrap_mode = 2
+
+[node name="Label" type="Label" parent="."]
+layout_mode = 0
+offset_left = 664.0
+offset_top = 944.0
+offset_right = 1264.0
+offset_bottom = 1017.0
+text = "TRUCK 1"
+horizontal_alignment = 1
+
+[connection signal="pressed" from="Select" to="." method="_on_select_pressed"]

@@ -4,8 +4,9 @@ importer="texture"
 type="CompressedTexture2D"
 uid="uid://86qrylfayy1e"
 path.s3tc="res://.godot/imported/truck2_Cube_6.png-bc0b5cb828518dbb5ad606f352ab71d7.s3tc.ctex"
+path.etc2="res://.godot/imported/truck2_Cube_6.png-bc0b5cb828518dbb5ad606f352ab71d7.etc2.ctex"
 metadata={
-"imported_formats": ["s3tc_bptc"],
+"imported_formats": ["s3tc_bptc", "etc2_astc"],
 "vram_texture": true
 }
 generator_parameters={
@@ -15,7 +16,7 @@ generator_parameters={
 [deps]
 
 source_file="res://assets/Truck1/truck2_Cube_6.png"
-dest_files=["res://.godot/imported/truck2_Cube_6.png-bc0b5cb828518dbb5ad606f352ab71d7.s3tc.ctex"]
+dest_files=["res://.godot/imported/truck2_Cube_6.png-bc0b5cb828518dbb5ad606f352ab71d7.s3tc.ctex", "res://.godot/imported/truck2_Cube_6.png-bc0b5cb828518dbb5ad606f352ab71d7.etc2.ctex"]
 
 [params]
 

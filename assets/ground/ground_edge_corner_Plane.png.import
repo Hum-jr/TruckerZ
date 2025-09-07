@@ -4,8 +4,9 @@ importer="texture"
 type="CompressedTexture2D"
 uid="uid://crpqfrg1mvjw8"
 path.s3tc="res://.godot/imported/ground_edge_corner_Plane.png-71eb60e9574bef47a3e64ec9b972402a.s3tc.ctex"
+path.etc2="res://.godot/imported/ground_edge_corner_Plane.png-71eb60e9574bef47a3e64ec9b972402a.etc2.ctex"
 metadata={
-"imported_formats": ["s3tc_bptc"],
+"imported_formats": ["s3tc_bptc", "etc2_astc"],
 "vram_texture": true
 }
 generator_parameters={
@@ -15,7 +16,7 @@ generator_parameters={
 [deps]
 
 source_file="res://assets/ground/ground_edge_corner_Plane.png"
-dest_files=["res://.godot/imported/ground_edge_corner_Plane.png-71eb60e9574bef47a3e64ec9b972402a.s3tc.ctex"]
+dest_files=["res://.godot/imported/ground_edge_corner_Plane.png-71eb60e9574bef47a3e64ec9b972402a.s3tc.ctex", "res://.godot/imported/ground_edge_corner_Plane.png-71eb60e9574bef47a3e64ec9b972402a.etc2.ctex"]
 
 [params]
 

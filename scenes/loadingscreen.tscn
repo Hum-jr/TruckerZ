@@ -48,7 +48,7 @@ texture_under = ExtResource("1_kodxk")
 texture_progress = ExtResource("2_lol54")
 
 [node name="Timer" type="Timer" parent="."]
-wait_time = 10.0
+wait_time = 5.0
 autostart = true
 
 [connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]

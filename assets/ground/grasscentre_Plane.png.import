@@ -4,8 +4,9 @@ importer="texture"
 type="CompressedTexture2D"
 uid="uid://bxwkoyb6rbbw"
 path.s3tc="res://.godot/imported/grasscentre_Plane.png-29f8b5a58ba83d5385e6ad8ceabd0b0e.s3tc.ctex"
+path.etc2="res://.godot/imported/grasscentre_Plane.png-29f8b5a58ba83d5385e6ad8ceabd0b0e.etc2.ctex"
 metadata={
-"imported_formats": ["s3tc_bptc"],
+"imported_formats": ["s3tc_bptc", "etc2_astc"],
 "vram_texture": true
 }
 generator_parameters={
@@ -15,7 +16,7 @@ generator_parameters={
 [deps]
 
 source_file="res://assets/ground/grasscentre_Plane.png"
-dest_files=["res://.godot/imported/grasscentre_Plane.png-29f8b5a58ba83d5385e6ad8ceabd0b0e.s3tc.ctex"]
+dest_files=["res://.godot/imported/grasscentre_Plane.png-29f8b5a58ba83d5385e6ad8ceabd0b0e.s3tc.ctex", "res://.godot/imported/grasscentre_Plane.png-29f8b5a58ba83d5385e6ad8ceabd0b0e.etc2.ctex"]
 
 [params]
 

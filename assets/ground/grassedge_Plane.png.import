@@ -4,8 +4,9 @@ importer="texture"
 type="CompressedTexture2D"
 uid="uid://dvpwkgqah7yvw"
 path.s3tc="res://.godot/imported/grassedge_Plane.png-4979fba683e9cb1485f8a3003cef5c85.s3tc.ctex"
+path.etc2="res://.godot/imported/grassedge_Plane.png-4979fba683e9cb1485f8a3003cef5c85.etc2.ctex"
 metadata={
-"imported_formats": ["s3tc_bptc"],
+"imported_formats": ["s3tc_bptc", "etc2_astc"],
 "vram_texture": true
 }
 generator_parameters={
@@ -15,7 +16,7 @@ generator_parameters={
 [deps]
 
 source_file="res://assets/ground/grassedge_Plane.png"
-dest_files=["res://.godot/imported/grassedge_Plane.png-4979fba683e9cb1485f8a3003cef5c85.s3tc.ctex"]
+dest_files=["res://.godot/imported/grassedge_Plane.png-4979fba683e9cb1485f8a3003cef5c85.s3tc.ctex", "res://.godot/imported/grassedge_Plane.png-4979fba683e9cb1485f8a3003cef5c85.etc2.ctex"]
 
 [params]
 

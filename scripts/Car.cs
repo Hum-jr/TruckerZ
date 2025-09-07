@@ -11,15 +11,12 @@ public partial class Car : VehicleBody3D
     
     private AudioStreamPlayer _audioStreamPlayer;
 
-    // Called when the node enters the scene tree for the first time.
+    // Called when the node enters the scene tree for th B e first time.
     public override void _Ready()
     {
         _audioStreamPlayer = GetNode<AudioStreamPlayer>("Run");
         _currentSpeed = LinearVelocity.Length();
         _audioStreamPlayer.Play();
-        
-        
-        
         
     }
 
@@ -28,19 +25,18 @@ public partial class Car : VehicleBody3D
         
         // Vehicle controls
         var steerInput = Input.GetAxis("steer_right", "steer_left") * MaxSteer;
-        Steering = Mathf.MoveToward(Steering, steerInput, (float)delta);
+        Steering = (float)Mathf.MoveToward(Steering, steerInput, (float)delta);
         
         var accelerateInput = Input.GetAxis("reverse", "accelerate") * EnginePower;
         EngineForce = accelerateInput;
+        GD.Print("Steering: " + Steering);
+        GD.Print("Accelerate: " + accelerateInput);
     
         
         if (_currentSpeed > 0.1 && _audioStreamPlayer.Playing == false)
         {
             _audioStreamPlayer.Play();
             // _audioStreamPlayer.Play();
-         
-
-
         }
     }
 }

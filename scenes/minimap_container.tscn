@@ -1,0 +1,31 @@
+[gd_scene load_steps=3 format=3 uid="uid://b7o2o86f35uhf"]
+
+[ext_resource type="Script" uid="uid://3bpek0qt3ve4" path="res://scripts/CarFollow.cs" id="1_qlq14"]
+
+[sub_resource type="ViewportTexture" id="ViewportTexture_endxa"]
+viewport_path = NodePath("MinimapContainer/SubViewport")
+
+[node name="MinimapContainer" type="Control"]
+layout_mode = 3
+anchors_preset = 1
+anchor_left = 1.0
+anchor_right = 1.0
+grow_horizontal = 0
+
+[node name="SubViewport" type="SubViewport" parent="."]
+use_taa = true
+size = Vector2i(200, 200)
+
+[node name="CarFollow" type="Camera3D" parent="SubViewport"]
+transform = Transform3D(-5.96046e-08, 1, 2.98023e-08, 1.78814e-07, -2.98023e-08, 1, 1, 5.96046e-08, -1.78814e-07, 114.236, 50.5001, -36.4075)
+projection = 1
+size = 40.999
+script = ExtResource("1_qlq14")
+
+[node name="TextureRect" type="TextureRect" parent="."]
+layout_mode = 0
+offset_left = -264.0
+offset_top = 64.0
+offset_right = -64.0
+offset_bottom = 264.0
+texture = SubResource("ViewportTexture_endxa")

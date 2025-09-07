@@ -4,8 +4,9 @@ importer="texture"
 type="CompressedTexture2D"
 uid="uid://dmnp254v1vwpx"
 path.s3tc="res://.godot/imported/mudside_Plane.png-501542aa7daa9350c2e7e05acfe82d82.s3tc.ctex"
+path.etc2="res://.godot/imported/mudside_Plane.png-501542aa7daa9350c2e7e05acfe82d82.etc2.ctex"
 metadata={
-"imported_formats": ["s3tc_bptc"],
+"imported_formats": ["s3tc_bptc", "etc2_astc"],
 "vram_texture": true
 }
 generator_parameters={
@@ -15,7 +16,7 @@ generator_parameters={
 [deps]
 
 source_file="res://assets/ground/mudside_Plane.png"
-dest_files=["res://.godot/imported/mudside_Plane.png-501542aa7daa9350c2e7e05acfe82d82.s3tc.ctex"]
+dest_files=["res://.godot/imported/mudside_Plane.png-501542aa7daa9350c2e7e05acfe82d82.s3tc.ctex", "res://.godot/imported/mudside_Plane.png-501542aa7daa9350c2e7e05acfe82d82.etc2.ctex"]
 
 [params]
 

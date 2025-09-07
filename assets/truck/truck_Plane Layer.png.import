@@ -4,15 +4,16 @@ importer="texture"
 type="CompressedTexture2D"
 uid="uid://cdsww2gyew4ff"
 path.s3tc="res://.godot/imported/truck_Plane Layer.png-7e9188038389082971296414bc11442e.s3tc.ctex"
+path.etc2="res://.godot/imported/truck_Plane Layer.png-7e9188038389082971296414bc11442e.etc2.ctex"
 metadata={
-"imported_formats": ["s3tc_bptc"],
+"imported_formats": ["s3tc_bptc", "etc2_astc"],
 "vram_texture": true
 }
 
 [deps]
 
 source_file="res://assets/truck/truck_Plane Layer.png"
-dest_files=["res://.godot/imported/truck_Plane Layer.png-7e9188038389082971296414bc11442e.s3tc.ctex"]
+dest_files=["res://.godot/imported/truck_Plane Layer.png-7e9188038389082971296414bc11442e.s3tc.ctex", "res://.godot/imported/truck_Plane Layer.png-7e9188038389082971296414bc11442e.etc2.ctex"]
 
 [params]
 

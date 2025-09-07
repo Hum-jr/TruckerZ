@@ -4,8 +4,9 @@ importer="texture"
 type="CompressedTexture2D"
 uid="uid://cab62p2fjpalt"
 path.s3tc="res://.godot/imported/mudcorner_Plane.png-b4ce708493ce543bc18d5c3d50c2ec82.s3tc.ctex"
+path.etc2="res://.godot/imported/mudcorner_Plane.png-b4ce708493ce543bc18d5c3d50c2ec82.etc2.ctex"
 metadata={
-"imported_formats": ["s3tc_bptc"],
+"imported_formats": ["s3tc_bptc", "etc2_astc"],
 "vram_texture": true
 }
 generator_parameters={
@@ -15,7 +16,7 @@ generator_parameters={
 [deps]
 
 source_file="res://assets/ground/mudcorner_Plane.png"
-dest_files=["res://.godot/imported/mudcorner_Plane.png-b4ce708493ce543bc18d5c3d50c2ec82.s3tc.ctex"]
+dest_files=["res://.godot/imported/mudcorner_Plane.png-b4ce708493ce543bc18d5c3d50c2ec82.s3tc.ctex", "res://.godot/imported/mudcorner_Plane.png-b4ce708493ce543bc18d5c3d50c2ec82.etc2.ctex"]
 
 [params]
 

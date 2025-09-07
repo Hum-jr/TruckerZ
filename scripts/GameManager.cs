@@ -1,10 +1,15 @@
 using Godot;
 using Godot.Collections;
 
-namespace Truckker.scripts;
 
+public static class GlobalData
+{
+    public static PackedScene SelectedTruck { get; set; }
+}
 public partial class GameManager : Node
 {
+    public static GameManager Instance { get; private set; }
+    private PackedScene SelectedTruck { get; set; }
     private TextureProgressBar _speedometer;
     private VehicleBody3D _truck;
     private Node2D _arrow;
@@ -12,7 +17,7 @@ public partial class GameManager : Node
     
     
     [Export]
-    private Array<PackedScene> _sceneArray = new Array<PackedScene>();
+    public Array<PackedScene> SceneArray = new Array<PackedScene>();
     [Export] 
     public float SpeedThreshold = 0.1f; // Minimum speed to register movement
     [Export] 
@@ -28,11 +33,14 @@ public partial class GameManager : Node
     public override void _Ready()
     {
         // Get references to nodes - adjust paths as needed
+        Instance = this;
         _speedometer = GetNode<TextureProgressBar>("ScreenElements/Speedometer2/TextureProgressBar");
-        _truck = GetNode<VehicleBody3D>("truck/VehicleBody3D");
+        //truck = GetNode<VehicleBody3D>("truck/VehicleBody3D");
         _arrow = GetNode<Node2D>("ScreenElements/Speedometer2/Arrow2");
         _speedometerLabel = GetNode<Label>("ScreenElements/Speedometer2/speed");
         
+        // Load the selected truck from GlobalData
+        LoadSelectedTruck();
         
         // Set up speedometer properties
         if (_speedometer != null)
@@ -47,6 +55,78 @@ public partial class GameManager : Node
         }
     }
 
+    private void LoadSelectedTruck()
+    {
+        if (GlobalData.SelectedTruck != null)
+        {
+            // Instantiate the selected truck
+            var truckInstance = GlobalData.SelectedTruck.Instantiate();
+            truckInstance.AddToGroup("trucks");
+            
+            // Find where to spawn the truck
+            var truckSpawnPoint = GetNodeOrNull<Node3D>("TruckSpawn");
+            if (truckSpawnPoint != null)
+            {
+                truckSpawnPoint.AddChild(truckInstance);
+            }
+            else
+            {
+                // If no specific spawn point, add to scene root
+                AddChild(truckInstance);
+            }
+            
+            // Update truck reference if the spawned truck is a VehicleBody3D
+            if (truckInstance is VehicleBody3D vehicleBody)
+            {
+                _truck = vehicleBody;
+                GD.Print("Truck is root node (VehicleBody3D)");
+            }
+            else
+            {
+                // Search for VehicleBody3D in the truck's children
+                _truck = FindVehicleBodyInNode(truckInstance);
+    
+                if (_truck != null)
+                {
+                    GD.Print($"Found VehicleBody3D in truck children: {_truck.Name}");
+                }
+                else
+                {
+                    GD.PrintErr("No VehicleBody3D found in truck scene!");
+                }
+            }
+            
+            GD.Print($"Loaded selected truck: {truckInstance.Name}");
+        }
+        else
+        {
+            GD.Print("No truck selected in GlobalData");
+        }
+    }
+    
+    private VehicleBody3D FindVehicleBodyInNode(Node node)
+    {
+        GD.Print($"Searching in node: {node.Name} (Type: {node.GetType().Name})");
+    
+        // Check if current node is VehicleBody3D
+        if (node is VehicleBody3D vehicleBody)
+        {
+            return vehicleBody;
+        }
+    
+        // Recursively search all children
+        foreach (Node child in node.GetChildren())
+        {
+            VehicleBody3D result = FindVehicleBodyInNode(child);
+            if (result != null)
+            {
+                return result;
+            }
+        }
+    
+        return null; // Not found
+    }
+
     // Called every frame. 'delta' is the elapsed time since the previous frame.
     public override void _Process(double delta)
     {
@@ -59,18 +139,14 @@ public partial class GameManager : Node
             if (currentSpeed < SpeedThreshold)
             {
                 currentSpeed = 0f;
-                
             }
             
             _speedometerLabel.Text = currentSpeed.ToString("0") + " KM/H";
             // Update speedometer progress bar
             _speedometer.Value = Mathf.Clamp(currentSpeed, _speedometer.MinValue, _speedometer.MaxValue);
             
-            
             // Update arrow rotation based on speed
             UpdateArrowRotation(currentSpeed);
-            
-            
         }
     }
     
@@ -89,8 +165,19 @@ public partial class GameManager : Node
         // arrow.RotationDegrees = targetRotation;
     }
 
-    private void _vehicle_choooser(int index)
+    private void VehicleChooser(int index)
     {
-        var vehicle = _sceneArray[index];
+        if (index >= 0 && index < SceneArray.Count)
+        {
+            var vehicle = SceneArray[index];
+            GlobalData.SelectedTruck = vehicle;
+            GD.Print($"Vehicle selected at index {index}");
+        }
+        else
+        {
+            GD.PrintErr($"Invalid vehicle index: {index}");
+        }
     }
+    
+    
 }

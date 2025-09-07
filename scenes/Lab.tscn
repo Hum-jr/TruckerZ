@@ -1,7 +1,6 @@
-[gd_scene load_steps=14 format=3 uid="uid://dqos1vfs40ymp"]
+[gd_scene load_steps=13 format=3 uid="uid://dqos1vfs40ymp"]
 
 [ext_resource type="Script" uid="uid://d3dta774wtb61" path="res://scripts/GameManager.cs" id="1_fsrjm"]
-[ext_resource type="Texture2D" uid="uid://cco845j3g8dh1" path="res://hdrs/citrus_orchard_road_puresky_4k.exr" id="1_mwbmb"]
 [ext_resource type="Texture2D" uid="uid://cuuwy7glag52j" path="res://textures/kenney_prototype-textures/PNG/Light/texture_11.png" id="2_npavg"]
 [ext_resource type="Texture2D" uid="uid://cn5vcf7w5lsiu" path="res://textures/speedometer/meter.png" id="6_lqjjf"]
 [ext_resource type="PackedScene" uid="uid://c127la57inrx2" path="res://scenes/truck.tscn" id="7_lqjjf"]
@@ -9,7 +8,6 @@
 [ext_resource type="PackedScene" uid="uid://dgkoky8w75a75" path="res://scenes/ramp.tscn" id="15_vthbb"]
 
 [sub_resource type="PanoramaSkyMaterial" id="PanoramaSkyMaterial_w5bod"]
-panorama = ExtResource("1_mwbmb")
 
 [sub_resource type="Sky" id="Sky_o251w"]
 sky_material = SubResource("PanoramaSkyMaterial_w5bod")

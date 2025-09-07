@@ -4,8 +4,9 @@ importer="texture"
 type="CompressedTexture2D"
 uid="uid://cm0rbqdcwp6yn"
 path.s3tc="res://.godot/imported/truck2_Cylinder Layer.png-de6d4482320183298f79ce6a32a3ec5b.s3tc.ctex"
+path.etc2="res://.godot/imported/truck2_Cylinder Layer.png-de6d4482320183298f79ce6a32a3ec5b.etc2.ctex"
 metadata={
-"imported_formats": ["s3tc_bptc"],
+"imported_formats": ["s3tc_bptc", "etc2_astc"],
 "vram_texture": true
 }
 generator_parameters={
@@ -15,7 +16,7 @@ generator_parameters={
 [deps]
 
 source_file="res://assets/Truck1/truck2_Cylinder Layer.png"
-dest_files=["res://.godot/imported/truck2_Cylinder Layer.png-de6d4482320183298f79ce6a32a3ec5b.s3tc.ctex"]
+dest_files=["res://.godot/imported/truck2_Cylinder Layer.png-de6d4482320183298f79ce6a32a3ec5b.s3tc.ctex", "res://.godot/imported/truck2_Cylinder Layer.png-de6d4482320183298f79ce6a32a3ec5b.etc2.ctex"]
 
 [params]
 

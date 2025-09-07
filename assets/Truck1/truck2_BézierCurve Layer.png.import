@@ -4,8 +4,9 @@ importer="texture"
 type="CompressedTexture2D"
 uid="uid://vqhk5x2b3xxd"
 path.s3tc="res://.godot/imported/truck2_BézierCurve Layer.png-61203ea426ce7d5d1e8bf02d3dfd533f.s3tc.ctex"
+path.etc2="res://.godot/imported/truck2_BézierCurve Layer.png-61203ea426ce7d5d1e8bf02d3dfd533f.etc2.ctex"
 metadata={
-"imported_formats": ["s3tc_bptc"],
+"imported_formats": ["s3tc_bptc", "etc2_astc"],
 "vram_texture": true
 }
 generator_parameters={
@@ -15,7 +16,7 @@ generator_parameters={
 [deps]
 
 source_file="res://assets/Truck1/truck2_BézierCurve Layer.png"
-dest_files=["res://.godot/imported/truck2_BézierCurve Layer.png-61203ea426ce7d5d1e8bf02d3dfd533f.s3tc.ctex"]
+dest_files=["res://.godot/imported/truck2_BézierCurve Layer.png-61203ea426ce7d5d1e8bf02d3dfd533f.s3tc.ctex", "res://.godot/imported/truck2_BézierCurve Layer.png-61203ea426ce7d5d1e8bf02d3dfd533f.etc2.ctex"]
 
 [params]
 

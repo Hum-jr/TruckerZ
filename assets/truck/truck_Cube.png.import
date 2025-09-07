@@ -4,15 +4,16 @@ importer="texture"
 type="CompressedTexture2D"
 uid="uid://defr8vcorlqgd"
 path.s3tc="res://.godot/imported/truck_Cube.png-312ca1b1c41845c1bdf4ac60cfacbfe3.s3tc.ctex"
+path.etc2="res://.godot/imported/truck_Cube.png-312ca1b1c41845c1bdf4ac60cfacbfe3.etc2.ctex"
 metadata={
-"imported_formats": ["s3tc_bptc"],
+"imported_formats": ["s3tc_bptc", "etc2_astc"],
 "vram_texture": true
 }
 
 [deps]
 
 source_file="res://assets/truck/truck_Cube.png"
-dest_files=["res://.godot/imported/truck_Cube.png-312ca1b1c41845c1bdf4ac60cfacbfe3.s3tc.ctex"]
+dest_files=["res://.godot/imported/truck_Cube.png-312ca1b1c41845c1bdf4ac60cfacbfe3.s3tc.ctex", "res://.godot/imported/truck_Cube.png-312ca1b1c41845c1bdf4ac60cfacbfe3.etc2.ctex"]
 
 [params]
 

@@ -75,16 +75,6 @@ Nairobi, Kenya"
 horizontal_alignment = 1
 vertical_alignment = 1
 
-[node name="Label2" type="Label" parent="ColorRect"]
-layout_mode = 2
-offset_top = 559.0
-offset_right = 1920.0
-offset_bottom = 632.0
-theme_override_font_sizes/font_size = 20
-text = "Presents"
-horizontal_alignment = 1
-vertical_alignment = 1
-
 [node name="Timer" type="Timer" parent="."]
 wait_time = 5.0
 autostart = true

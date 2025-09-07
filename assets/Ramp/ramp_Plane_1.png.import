@@ -4,8 +4,9 @@ importer="texture"
 type="CompressedTexture2D"
 uid="uid://c152bj08b6iu8"
 path.s3tc="res://.godot/imported/ramp_Plane_1.png-6ed94ba00d812f4f70fb68f9b4ea92b4.s3tc.ctex"
+path.etc2="res://.godot/imported/ramp_Plane_1.png-6ed94ba00d812f4f70fb68f9b4ea92b4.etc2.ctex"
 metadata={
-"imported_formats": ["s3tc_bptc"],
+"imported_formats": ["s3tc_bptc", "etc2_astc"],
 "vram_texture": true
 }
 generator_parameters={
@@ -15,7 +16,7 @@ generator_parameters={
 [deps]
 
 source_file="res://assets/Ramp/ramp_Plane_1.png"
-dest_files=["res://.godot/imported/ramp_Plane_1.png-6ed94ba00d812f4f70fb68f9b4ea92b4.s3tc.ctex"]
+dest_files=["res://.godot/imported/ramp_Plane_1.png-6ed94ba00d812f4f70fb68f9b4ea92b4.s3tc.ctex", "res://.godot/imported/ramp_Plane_1.png-6ed94ba00d812f4f70fb68f9b4ea92b4.etc2.ctex"]
 
 [params]
 

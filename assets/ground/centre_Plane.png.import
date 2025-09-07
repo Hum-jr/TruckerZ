@@ -4,8 +4,9 @@ importer="texture"
 type="CompressedTexture2D"
 uid="uid://mifmnsbetwvx"
 path.s3tc="res://.godot/imported/centre_Plane.png-54e5468c38232a1857f59431abba175c.s3tc.ctex"
+path.etc2="res://.godot/imported/centre_Plane.png-54e5468c38232a1857f59431abba175c.etc2.ctex"
 metadata={
-"imported_formats": ["s3tc_bptc"],
+"imported_formats": ["s3tc_bptc", "etc2_astc"],
 "vram_texture": true
 }
 generator_parameters={
@@ -15,7 +16,7 @@ generator_parameters={
 [deps]
 
 source_file="res://assets/ground/centre_Plane.png"
-dest_files=["res://.godot/imported/centre_Plane.png-54e5468c38232a1857f59431abba175c.s3tc.ctex"]
+dest_files=["res://.godot/imported/centre_Plane.png-54e5468c38232a1857f59431abba175c.s3tc.ctex", "res://.godot/imported/centre_Plane.png-54e5468c38232a1857f59431abba175c.etc2.ctex"]
 
 [params]
 

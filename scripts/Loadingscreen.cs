@@ -28,7 +28,7 @@ public partial class Loadingscreen : Control
 
 	private void _on_timer_timeout()
 	{
-		GetTree().ChangeSceneToFile("res://scenes/GameManager.tscn");
+		GetTree().ChangeSceneToFile("res://scenes/CarSelector.tscn");
 
 	}
 }
