@@ -61,13 +61,14 @@ public partial class GameManager : Node
         {
             // Instantiate the selected truck
             var truckInstance = GlobalData.SelectedTruck.Instantiate();
-            truckInstance.AddToGroup("trucks");
+            
             
             // Find where to spawn the truck
             var truckSpawnPoint = GetNodeOrNull<Node3D>("TruckSpawn");
             if (truckSpawnPoint != null)
             {
                 truckSpawnPoint.AddChild(truckInstance);
+                truckInstance.AddToGroup("trucks");
             }
             else
             {

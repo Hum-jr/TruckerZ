@@ -1,0 +1,25 @@
+[gd_resource type="Resource" script_class="Mission" load_steps=3 format=3 uid="uid://b6euj3g30lgcb"]
+
+[ext_resource type="Script" uid="uid://dp3aeiofawsu3" path="res://scripts/missions/Mission.cs" id="1_fex5i"]
+
+[sub_resource type="PlaceholderTexture2D" id="PlaceholderTexture2D_fex5i"]
+
+[resource]
+script = ExtResource("1_fex5i")
+MissionId = "1"
+Title = "Park "
+Description = ""
+Icon = SubResource("PlaceholderTexture2D_fex5i")
+Type = 0
+Status = 0
+StartLocation = Vector3(0, 0, 0)
+EndLocation = Vector3(0, 0, 0)
+TimeLimit = 0.0
+RewardMoney = 0
+RewardXp = 0
+TargetItem = ""
+TargetQuantity = 0
+RequiredSpeed = 0.0
+RequiredMissions = PackedStringArray()
+RequiredLevel = 1
+metadata/_custom_type_script = "uid://dp3aeiofawsu3"

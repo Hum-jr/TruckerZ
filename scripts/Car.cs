@@ -7,21 +7,20 @@ public partial class Car : VehicleBody3D
     [Export] 
     public float EnginePower = 300f;
 
-    private float _currentSpeed;
-    
-    private AudioStreamPlayer _audioStreamPlayer;
+    private float currentSpeed;
+    private AudioStreamPlayer audioStreamPlayer;
 
-    // Called when the node enters the scene tree for th B e first time.
+    // Called when the node enters the scene tree for the first time.
     public override void _Ready()
     {
-        _audioStreamPlayer = GetNode<AudioStreamPlayer>("Run");
-        _currentSpeed = LinearVelocity.Length();
-        _audioStreamPlayer.Play();
-        
+        audioStreamPlayer = GetNode<AudioStreamPlayer>("Run");
+        audioStreamPlayer.Play();
     }
 
     public override void _PhysicsProcess(double delta)
     {
+        // Update current speed
+        currentSpeed = LinearVelocity.Length();
         
         // Vehicle controls
         var steerInput = Input.GetAxis("steer_right", "steer_left") * MaxSteer;
@@ -29,14 +28,15 @@ public partial class Car : VehicleBody3D
         
         var accelerateInput = Input.GetAxis("reverse", "accelerate") * EnginePower;
         EngineForce = accelerateInput;
-        GD.Print("Steering: " + Steering);
-        GD.Print("Accelerate: " + accelerateInput);
     
-        
-        if (_currentSpeed > 0.1 && _audioStreamPlayer.Playing == false)
+        // Audio control
+        if (currentSpeed > 0.1 && !audioStreamPlayer.Playing)
         {
-            _audioStreamPlayer.Play();
-            // _audioStreamPlayer.Play();
+            audioStreamPlayer.Play();
         }
+
+        // Node3D visibility control - only visible when accelerating
+        bool isAccelerating = accelerateInput > 0;
+        //GetNode<Node3D>("Node3D/Node3D2").Visible = isAccelerating;
     }
 }

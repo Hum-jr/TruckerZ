@@ -1,28 +1,39 @@
-[gd_scene load_steps=19 format=3 uid="uid://cjamfc7f2yvqn"]
+[gd_scene load_steps=20 format=3 uid="uid://cjamfc7f2yvqn"]
 
 [ext_resource type="Script" uid="uid://d3dta774wtb61" path="res://scripts/GameManager.cs" id="1_vxpsb"]
 [ext_resource type="PackedScene" uid="uid://fmprjckcc1uw" path="res://scenes/truck1.tscn" id="2_r03xe"]
 [ext_resource type="PackedScene" uid="uid://c127la57inrx2" path="res://scenes/truck.tscn" id="3_440lp"]
 [ext_resource type="Texture2D" uid="uid://c4vdgjucqxxpo" path="res://textures/coin.png" id="4_biy4i"]
 [ext_resource type="Texture2D" uid="uid://cjsug7tnlcy5p" path="res://textures/speedometer/meter1.png" id="8_4arur"]
-[ext_resource type="Script" uid="uid://bcwbyj804flgl" path="res://scripts/fps.gd" id="8_biy4i"]
 [ext_resource type="PackedScene" uid="uid://eftt0l1a6ut8" path="res://scenes/world.tscn" id="9_1jauj"]
 [ext_resource type="Texture2D" uid="uid://dttlnjrh8q885" path="res://textures/speedometer/full1.png" id="9_55cbs"]
 [ext_resource type="Texture2D" uid="uid://b1syropiv4i0m" path="res://textures/speedometer/arrow1.png" id="11_55cbs"]
 [ext_resource type="Texture2D" uid="uid://7uvjdi8vo5tx" path="res://textures/speedometer/fuelmeter.png" id="12_endxa"]
-[ext_resource type="Script" uid="uid://3bpek0qt3ve4" path="res://scripts/CarFollow.cs" id="14_endxa"]
+[ext_resource type="Shader" uid="uid://b1h7fqiwrlo7j" path="res://scripts/shaders/blinking.tres" id="14_r03xe"]
+[ext_resource type="Texture2D" uid="uid://bq7imoqdv81ah" path="res://textures/objective_highlight.png" id="15_440lp"]
 [ext_resource type="Texture2D" uid="uid://cn5vcf7w5lsiu" path="res://textures/speedometer/meter.png" id="17_i4wcc"]
 [ext_resource type="Texture2D" uid="uid://cp5c65f8fwgtv" path="res://textures/speedometer/full.png" id="18_4l3vs"]
 [ext_resource type="Texture2D" uid="uid://dh6u7e81ja0uy" path="res://textures/speedometer/arrow.png" id="20_1guj1"]
 
-[sub_resource type="PanoramaSkyMaterial" id="PanoramaSkyMaterial_2chjq"]
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_27pjn"]
+render_priority = 0
+shader = ExtResource("14_r03xe")
+shader_parameter/mainColor = Color(0.3, 1, 3, 1)
+shader_parameter/TransparencyTexture = ExtResource("15_440lp")
 
-[sub_resource type="Sky" id="Sky_s1ex7"]
-sky_material = SubResource("PanoramaSkyMaterial_2chjq")
+[sub_resource type="PlaneMesh" id="PlaneMesh_3lvuv"]
+lightmap_size_hint = Vector2i(82, 42)
+material = SubResource("ShaderMaterial_27pjn")
+size = Vector2(16, 8)
 
-[sub_resource type="Environment" id="Environment_jud04"]
+[sub_resource type="PanoramaSkyMaterial" id="PanoramaSkyMaterial_endxa"]
+
+[sub_resource type="Sky" id="Sky_1jauj"]
+sky_material = SubResource("PanoramaSkyMaterial_endxa")
+
+[sub_resource type="Environment" id="Environment_endxa"]
 background_mode = 2
-sky = SubResource("Sky_s1ex7")
+sky = SubResource("Sky_1jauj")
 ambient_light_source = 3
 tonemap_mode = 2
 ssao_enabled = true
@@ -40,19 +51,9 @@ volumetric_fog_length = 38.4
 adjustment_enabled = true
 adjustment_contrast = 1.31
 
-[sub_resource type="ViewportTexture" id="ViewportTexture_r03xe"]
-viewport_path = NodePath("MinimapContainer/SubViewport")
-
 [node name="GameManager" type="Node"]
 script = ExtResource("1_vxpsb")
 SceneArray = Array[PackedScene]([ExtResource("3_440lp"), ExtResource("2_r03xe")])
-
-[node name="DirectionalLight3D" type="DirectionalLight3D" parent="."]
-transform = Transform3D(-0.866023, -0.433016, 0.250001, 0, 0.499998, 0.866027, -0.500003, 0.749999, -0.43301, 0, 0, 0)
-shadow_enabled = true
-
-[node name="WorldEnvironment" type="WorldEnvironment" parent="."]
-environment = SubResource("Environment_jud04")
 
 [node name="Overlays" type="Control" parent="."]
 visible = false
@@ -101,23 +102,6 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
-
-[node name="coinlogo" type="Sprite2D" parent="ScreenElements"]
-position = Vector2(96, 104)
-scale = Vector2(0.136719, 0.136719)
-texture = ExtResource("4_biy4i")
-
-[node name="Coins" type="Label" parent="ScreenElements"]
-layout_mode = 2
-offset_left = 168.0
-offset_top = 64.0
-offset_right = 258.0
-offset_bottom = 137.0
-size_flags_horizontal = 0
-theme_override_colors/font_color = Color(1, 1, 1, 1)
-theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
-theme_override_constants/outline_size = 12
-text = "50"
 
 [node name="Speedometer2" type="Node2D" parent="ScreenElements"]
 position = Vector2(1736, 968)
@@ -185,42 +169,68 @@ offset_top = 888.0
 offset_right = 1120.0
 offset_bottom = 1024.0
 
-[node name="Label" type="Label" parent="ScreenElements"]
+[node name="CurrentMission" type="Label" parent="ScreenElements"]
 layout_mode = 0
 offset_left = 888.0
-offset_top = 920.0
+offset_top = 872.0
 offset_right = 1080.0
-offset_bottom = 993.0
+offset_bottom = 945.0
 theme_override_colors/font_color = Color(0.455817, 0.455817, 0.455817, 1)
-theme_override_font_sizes/font_size = 32
+theme_override_font_sizes/font_size = 16
+text = "CURRENT MISSION"
 horizontal_alignment = 1
 vertical_alignment = 1
-script = ExtResource("8_biy4i")
+
+[node name="Panel2" type="Panel" parent="ScreenElements"]
+self_modulate = Color(1, 1, 1, 0.434)
+layout_mode = 1
+offset_left = 64.0
+offset_top = 64.0
+offset_right = 384.0
+offset_bottom = 272.0
+
+[node name="Coins" type="Label" parent="ScreenElements/Panel2"]
+layout_mode = 2
+offset_left = 144.0
+offset_top = 56.0
+offset_right = 234.0
+offset_bottom = 129.0
+size_flags_horizontal = 0
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 12
+theme_override_font_sizes/font_size = 52
+text = "50"
+
+[node name="Coins2" type="Label" parent="ScreenElements/Panel2"]
+layout_mode = 2
+offset_left = 8.0
+offset_top = 120.0
+offset_right = 303.0
+offset_bottom = 193.0
+size_flags_horizontal = 0
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 12
+theme_override_font_sizes/font_size = 52
+text = "5000 xp"
+horizontal_alignment = 1
+
+[node name="coinlogo" type="Sprite2D" parent="ScreenElements/Panel2"]
+position = Vector2(88, 72)
+scale = Vector2(0.136719, 0.136719)
+texture = ExtResource("4_biy4i")
 
 [node name="TruckSpawn" type="Node3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 124.21, 0, -22.9694)
 
-[node name="MinimapContainer" type="Control" parent="."]
-layout_mode = 3
-anchors_preset = 1
-anchor_left = 1.0
-anchor_right = 1.0
-grow_horizontal = 0
+[node name="auragloweffect" type="MeshInstance3D" parent="."]
+transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 142.343, 0.02876, -36.7614)
+mesh = SubResource("PlaneMesh_3lvuv")
 
-[node name="SubViewport" type="SubViewport" parent="MinimapContainer"]
-use_taa = true
-size = Vector2i(200, 200)
+[node name="DirectionalLight3D" type="DirectionalLight3D" parent="."]
+transform = Transform3D(-0.866023, -0.433016, 0.250001, 0, 0.499998, 0.866027, -0.500003, 0.749999, -0.43301, 0, 0, 0)
+shadow_enabled = true
 
-[node name="CarFollow" type="Camera3D" parent="MinimapContainer/SubViewport"]
-transform = Transform3D(-5.96046e-08, 1, 2.98023e-08, 1.78814e-07, -2.98023e-08, 1, 1, 5.96046e-08, -1.78814e-07, 114.236, 50.5001, -36.4075)
-projection = 1
-size = 40.999
-script = ExtResource("14_endxa")
-
-[node name="TextureRect" type="TextureRect" parent="MinimapContainer"]
-layout_mode = 0
-offset_left = -264.0
-offset_top = 64.0
-offset_right = -64.0
-offset_bottom = 264.0
-texture = SubResource("ViewportTexture_r03xe")
+[node name="WorldEnvironment" type="WorldEnvironment" parent="."]
+environment = SubResource("Environment_endxa")

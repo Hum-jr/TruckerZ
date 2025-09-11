@@ -34,9 +34,14 @@ project/assembly_name="Truckker"
 movie_writer/movie_file="C:/Users/HAMPHREY/Desktop/film.avi"
 movie_writer/disable_vsync=true
 
+[editor_plugins]
+
+enabled=PackedStringArray("res://addons/GPUTrail-main/plugin.cfg")
+
 [global_group]
 
 Disappear=""
+trucks=""
 
 [gui]
 

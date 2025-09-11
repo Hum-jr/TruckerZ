@@ -84,7 +84,7 @@ public partial class InnerC : Sprite2D
     }
         
     // Add method to check joystick output for debugging
-    public Vector2 GetJoystickOutput()
+    private Vector2 GetJoystickOutput()
     {
         Vector2 offset = GlobalPosition - parent.GlobalPosition;
         Vector2 normalizedOutput = offset / MaxLength;
@@ -93,7 +93,7 @@ public partial class InnerC : Sprite2D
     }
 
     // Complete the calculateVector method
-    public Vector2 CalculateVector()
+    private Vector2 CalculateVector()
     {
         Vector2 offset = GlobalPosition - parent.GlobalPosition;
         
@@ -114,13 +114,13 @@ public partial class InnerC : Sprite2D
     }
     
     // Optional: Get raw input values (useful for debugging)
-    public Vector2 GetRawInput()
+    private Vector2 GetRawInput()
     {
         return GlobalPosition - parent.GlobalPosition;
     }
     
     // Optional: Check if joystick is currently being used
-    public bool IsPressed()
+    private bool IsPressed()
     {
         return pressed;
     }
