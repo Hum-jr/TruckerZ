@@ -47,7 +47,7 @@ color = Color(0.631035, 0.631035, 0.631035, 1)
 color_ramp = SubResource("GradientTexture1D_ww304")
 alpha_curve = SubResource("CurveTexture_i7fff")
 
-[node name="Node3D" type="Node3D"]
+[node name="smoke" type="Node3D"]
 
 [node name="stylisedSmoke" type="GPUParticles3D" parent="."]
 material_override = SubResource("ShaderMaterial_d0sik")

@@ -1,4 +1,4 @@
-[gd_scene load_steps=6 format=3 uid="uid://cb3486ktm86tu"]
+[gd_scene load_steps=7 format=3 uid="uid://cb3486ktm86tu"]
 
 [ext_resource type="Shader" uid="uid://u1tgoba5rgcx" path="res://scripts/shaders/water2.gdshader" id="1_h7np4"]
 
@@ -7,6 +7,8 @@ size = Vector2(1000, 1000)
 subdivide_width = 250
 subdivide_depth = 250
 
+[sub_resource type="Gradient" id="Gradient_h7np4"]
+
 [sub_resource type="FastNoiseLite" id="FastNoiseLite_h7np4"]
 noise_type = 3
 seed = 2
@@ -14,6 +16,7 @@ frequency = 0.0427
 
 [sub_resource type="NoiseTexture2D" id="NoiseTexture2D_h7np4"]
 noise = SubResource("FastNoiseLite_h7np4")
+color_ramp = SubResource("Gradient_h7np4")
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_vwe2q"]
 render_priority = 0
@@ -22,7 +25,7 @@ shader_parameter/time_speed = 0.125
 shader_parameter/surface_speed = 0.5
 shader_parameter/spin = 0.1
 shader_parameter/brightness = 0.6
-shader_parameter/color_intensity = 1.0
+shader_parameter/color_intensity = 0.0
 shader_parameter/horizontal_frequency = 2.0
 shader_parameter/vertical_frequency = 2.0
 shader_parameter/size = 3.0
@@ -30,7 +33,7 @@ shader_parameter/banding_bias = 0.6
 shader_parameter/noise_texture = SubResource("NoiseTexture2D_h7np4")
 shader_parameter/wave_height = 1.0
 shader_parameter/texture_height = 1.0
-shader_parameter/color1 = Color(0.0835643, 0.505067, 0.999985, 1)
+shader_parameter/color1 = Color(0.59, 0.761, 1, 1)
 shader_parameter/color2 = Color(0.274, 0.474, 0.98, 1)
 shader_parameter/color3 = Color(0.059, 0.389, 0.85, 1)
 shader_parameter/color4 = Color(0, 0.267, 1, 1)

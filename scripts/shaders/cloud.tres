@@ -26,7 +26,7 @@ constant = Color(0, 0, 0, 1)
 
 [resource]
 code = "shader_type spatial;
-render_mode blend_mix, depth_draw_opaque, cull_disabled, diffuse_toon, specular_toon;
+render_mode blend_mix, depth_draw_opaque, depth_test_default, cull_disabled, diffuse_toon, specular_toon;
 
 uniform vec2 texture_scale = vec2(1.000000, 1.000000);
 uniform sampler2D dissolvertexture : source_color, hint_default_black;

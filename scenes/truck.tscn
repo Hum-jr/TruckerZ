@@ -1,4 +1,4 @@
-[gd_scene load_steps=79 format=4 uid="uid://c127la57inrx2"]
+[gd_scene load_steps=80 format=4 uid="uid://c127la57inrx2"]
 
 [ext_resource type="Script" uid="uid://bapxidoreolat" path="res://scripts/Car.cs" id="1_xro4f"]
 [ext_resource type="Shader" uid="uid://j0eqex0pbfl5" path="res://scripts/shaders/truck1.gdshader" id="2_qjvdq"]
@@ -16,6 +16,7 @@
 [ext_resource type="Texture2D" uid="uid://vqhk5x2b3xxd" path="res://assets/Truck1/truck2_BézierCurve Layer.png" id="14_b3y1j"]
 [ext_resource type="Script" uid="uid://2tcc7eqbpxif" path="res://scripts/Camera3d.cs" id="14_bnaug"]
 [ext_resource type="Script" uid="uid://3bpek0qt3ve4" path="res://scripts/CarFollow.cs" id="16_35b5j"]
+[ext_resource type="PackedScene" uid="uid://bp4evr5w2wtp1" path="res://scenes/track.tscn" id="16_b0h73"]
 [ext_resource type="Texture2D" uid="uid://k1prfoufvlt2" path="res://textures/minimap_arrow.png" id="17_i6fv8"]
 
 [sub_resource type="CapsuleShape3D" id="CapsuleShape3D_i6fv8"]
@@ -834,6 +835,7 @@ viewport_path = NodePath("MinimapContainer/SubViewport")
 
 [node name="VehicleBody3D" type="VehicleBody3D" parent="."]
 mass = 150.0
+gravity_scale = 1.2
 script = ExtResource("1_xro4f")
 MaxSteer = 0.6
 
@@ -1044,6 +1046,12 @@ script = ExtResource("14_bnaug")
 JoystickSensitivity = 1.0
 MinVerticalAngle = -5.0
 MaxVerticalAngle = 90.0
+
+[node name="trail2" parent="VehicleBody3D" instance=ExtResource("16_b0h73")]
+transform = Transform3D(-1.0000002, 0, -1.192093e-07, 0, 1, 0, 1.192093e-07, 0, -1.0000002, -1.5078999, 0.13821012, -4.457385)
+
+[node name="trail3" parent="VehicleBody3D" instance=ExtResource("16_b0h73")]
+transform = Transform3D(1.0000005, 0, 2.3841866e-07, 0, 1, 0, -2.3841866e-07, 0, 1.0000005, 1.5783445, 0.1546691, -4.460023)
 
 [node name="MinimapContainer" type="Control" parent="."]
 layout_mode = 3
